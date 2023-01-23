@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.useRefAppDiv {
+  border: 2px solid rgb(234, 105, 31);
+  margin-bottom: 20px;
+}
+.useRefButton {
+  background-color: rgb(234, 105, 31);
+}
+.ApiDiv {
+  border: 2px solid rgb(60, 168, 28);
+}
+.apiButton {
+  background-color: rgb(60, 168, 28);
+}
+.useContextDiv {
+  border: 2px solid rgb(84, 105, 141);
+  margin-bottom: 20px;
+}
+.useContextButton {
+  background-color: rgb(84, 105, 141);
+}
