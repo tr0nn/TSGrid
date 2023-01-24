@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import './index.css';
 
 export default function UseRefApp() {
@@ -22,13 +22,15 @@ export function UseRefExaples() {
       <hr />
       <FocusInput /> <hr />
       <VideoPlayerStopCont /> <hr />
+      <InputValueCounter /> <hr />
+      <CurrentPreviousValue /> <hr />
       <ScrollUseRef /> <hr />
     </div>
   );
 }
 
 // ref ცვლადი JSX ში არ განხლდება რადგან ის არ იწვევს render-ს.
-// ref არ იწვევს რენდერს.
+
 function CounterRef() {
   const ref = useRef(0);
 
@@ -163,6 +165,47 @@ export function VideoPlayerStopCont() {
           type="video/mp4"
         />
       </video>
+    </>
+  );
+}
+function InputValueCounter() {
+  const [inputValue, setInputValue] = useState('');
+
+  const count = useRef(0);
+
+  useEffect(() => {
+    count.current = count.current + 1;
+  });
+
+  return (
+    <>
+      <input
+        type="text"
+        value={inputValue}
+        onChange={e => setInputValue(e.target.value)}
+      />
+      <h1>render count : {count.current} times</h1>
+    </>
+  );
+}
+
+function CurrentPreviousValue() {
+  const [inputValue, setInputValue] = useState('');
+  const previousInputValue = useRef('');
+
+  useEffect(() => {
+    previousInputValue.current = inputValue;
+  }, [inputValue]);
+
+  return (
+    <>
+      <input
+        type="text"
+        value={inputValue}
+        onChange={e => setInputValue(e.target.value)}
+      />
+      <h2>Current Value: {inputValue}</h2>
+      <h2>Previous Value: {previousInputValue.current}</h2>
     </>
   );
 }
