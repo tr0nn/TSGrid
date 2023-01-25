@@ -5,7 +5,7 @@ import ApiApp from './ApiAsyncAxiosFetch/ApiApp';
 import UseRefApp from './userRef';
 import AppUseContext from './useContext/AppUseContext';
 import OneRender from './oneRender';
-
+import AppTipCalculator from './TipCalculator/AppTipCalculator';
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
@@ -16,6 +16,7 @@ root.render(
     <UseRefApp />
     <ApiApp />
     <OneRender />
+    <AppTipCalculator />
   </>
 
   //</React.StrictMode>

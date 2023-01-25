@@ -14,20 +14,36 @@ code {
 .useRefAppDiv {
   border: 2px solid rgb(234, 105, 31);
   margin-bottom: 20px;
+  padding-left: 20px;
 }
 .useRefButton {
   background-color: rgb(234, 105, 31);
+  width: 150px;
 }
 .ApiDiv {
   border: 2px solid rgb(60, 168, 28);
+  padding-left: 20px;
 }
 .apiButton {
   background-color: rgb(60, 168, 28);
+  width: 150px;
 }
 .useContextDiv {
   border: 2px solid rgb(84, 105, 141);
   margin-bottom: 20px;
+  padding-left: 20px;
 }
 .useContextButton {
   background-color: rgb(84, 105, 141);
+  width: 150px;
+}
+
+.tipButton {
+  background-color: rgb(188, 204, 64);
+  width: 150px;
+}
+.tipDiv {
+  margin-top: 20px;
+  border: 2px solid rgb(188, 204, 64);
+  padding-left: 20px;
 }
