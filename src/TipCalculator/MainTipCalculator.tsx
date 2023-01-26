@@ -72,8 +72,7 @@ export default function MainTipCalculator() {
         placeholder="number of people"
         type="number"
         value={people}
-        // onKeyDown არის კლავიატურის ლისენერი
-        //როდესაც კლავიატურაზე წერტილს დავაწვებით არ ჩაიწერება
+        // then press on keyboard . dont write
         onKeyDown={e => {
           if (e.key === '.') {
             e.preventDefault();
