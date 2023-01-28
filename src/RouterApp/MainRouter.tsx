@@ -4,6 +4,7 @@ import AboutPage from './AboutPage';
 import ContactPage from './ContactPage';
 import FaqPage from './FaqPage';
 import QuestionPage from './QuestionPage';
+
 function MainRouter() {
   return (
     <>
@@ -25,6 +26,9 @@ function MainRouter() {
             </li>
             <li>
               <Link to="faq">Faq</Link>
+            </li>
+            <li>
+              <Link to="faq/:88">Faq88Id Exaple AppUseContext</Link>
             </li>
           </ul>
         </nav>
