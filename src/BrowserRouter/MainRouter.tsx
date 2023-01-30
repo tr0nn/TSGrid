@@ -1,9 +1,23 @@
 import { Routes, Route, Link } from 'react-router-dom';
+import { useState } from 'react';
 import HomePage from './HomePage';
 import AboutPage from './AboutPage';
 import ContactPage from './ContactPage';
 import FaqPage from './FaqPage';
 import QuestionPage from './QuestionPage';
+import '../index.css';
+
+export default function MainRouterFunc() {
+  const [routeState, setRoutState] = useState(false);
+  return (
+    <div className="routerDiv">
+      <button className="routerBtn" onClick={() => setRoutState(!routeState)}>
+        BrowserRouter
+      </button>
+      {routeState ? <MainRouter /> : null}
+    </div>
+  );
+}
 
 function MainRouter() {
   return (
@@ -43,5 +57,3 @@ function MainRouter() {
     </>
   );
 }
-
-export default MainRouter;
