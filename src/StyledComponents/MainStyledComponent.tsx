@@ -1,5 +1,6 @@
 // style-components გასაშვებათ terminalში ჯერ უნდა გაეშვას npm install --save-dev @types/styled-components
 // რადგან packege.json / devDependencies ში ჩავარდეს
+// -- Extensions უმჯობესია დაყენდეს vscode-styled-components  რადგან ` ` ბრჭყალებში გაფერადდეს და დაიწყოს კარნახი.
 import Styled from 'styled-components';
 import { useState } from 'react';
 import '../index.css';
@@ -26,12 +27,12 @@ export default function MainStyledComponent() {
 function StyledComponent() {
   return (
     <div>
-      <Title>hello world</Title>
+      <Title primary>hello world</Title>
     </div>
   );
 }
-
-const Title = Styled.h2`
+//<{primary: boolean}> is typescript initil
+const Title = Styled.h2<{ primary: boolean }>`
 font-size: 2em;
-color: red;
+color: ${props => (props.primary ? 'green' : 'red')};
 `;
