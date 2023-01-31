@@ -4,6 +4,7 @@ import HomePage from './HomePage';
 import AboutPage from './AboutPage';
 import ContactPage from './ContactPage';
 import FaqPage from './FaqPage';
+import SettingsPage from './SettingsPage';
 import QuestionPage from './QuestionPage';
 import '../index.css';
 
@@ -44,6 +45,9 @@ function MainRouter() {
             <li>
               <Link to="faq/:88">Faq88Id Exaple AppUseContext</Link>
             </li>
+            <li>
+              <Link to="setting">Setting</Link>
+            </li>
           </ul>
         </nav>
       </header>
@@ -53,6 +57,7 @@ function MainRouter() {
         <Route path="contact" element={<ContactPage />} />
         <Route path="faq" element={<FaqPage />} />
         <Route path="faq/:questionId" element={<QuestionPage />} />
+        <Route path="setting" element={<SettingsPage />} />
       </Routes>
     </>
   );
