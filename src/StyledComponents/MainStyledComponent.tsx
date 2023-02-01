@@ -5,6 +5,7 @@ import Styled from 'styled-components';
 import { useState } from 'react';
 import '../index.css';
 import styled from 'styled-components';
+import CssStyles from './CssStyles';
 
 export default function MainStyledComponent() {
   const [styleComp, setStyleComp] = useState(false);
@@ -28,6 +29,7 @@ function StyledComponent() {
   return (
     <div>
       <Title primary>hello world</Title>
+      <CssStyles />
     </div>
   );
 }
