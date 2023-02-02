@@ -4,7 +4,7 @@ import './index.css';
 import ApiApp from './ApiAsyncAxiosFetch/ApiApp';
 import UseRefApp from './userRef';
 import AppUseContext from './useContext/AppUseContext';
-import OneRender from './oneRender';
+import OneRender from './OneRender/oneRender';
 import AppTipCalculator from './TipCalculator/AppTipCalculator';
 import { BrowserRouter } from 'react-router-dom';
 import MainRouterFunc from './BrowserRouter/MainRouter';

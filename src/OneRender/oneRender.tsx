@@ -1,5 +1,6 @@
 import React from 'react';
 import { useEffect, useRef } from 'react';
+import useMount from './hooks/useMount';
 
 // ამ შემთხვევაში useEffect  გაეშვება მხოლოდ ერთხელ რადგან :
 // useRef არის true და render მას ვერ შეცვლის, სანამ ხელით
@@ -14,5 +15,10 @@ export default function OneRender() {
       conosleRef.current = false;
     }
   }, []);
+
+  // useMount არის იმპორტირებული Costum Hook რომელიც გააკეთებს იგივე საქმეს რაც მაღლა კეთდება.
+  useMount(() => {
+    console.log('console გაეშვა useMount დან მხოლოდ 1x');
+  });
   return <></>;
 }

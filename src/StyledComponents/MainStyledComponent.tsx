@@ -28,13 +28,13 @@ export default function MainStyledComponent() {
 function StyledComponent() {
   return (
     <div>
-      <Title primary>hello world</Title>
+      <Title primary>hello world from styled components</Title>
       <CssStyles />
     </div>
   );
 }
 //<{primary: boolean}> is typescript initil
 const Title = Styled.h2<{ primary: boolean }>`
-font-size: 2em;
+font-size: 1.5em;
 color: ${props => (props.primary ? 'green' : 'red')};
 `;
