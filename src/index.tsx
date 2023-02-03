@@ -4,12 +4,12 @@ import './index.css';
 import ApiApp from './ApiAsyncAxiosFetch/ApiApp';
 import UseRefApp from './userRef';
 import AppUseContext from './useContext/AppUseContext';
-import OneRender from './OneRender/oneRender';
+import OneRender from './CustomHook/OneRender/oneRender';
 import AppTipCalculator from './TipCalculator/AppTipCalculator';
 import { BrowserRouter } from 'react-router-dom';
 import MainRouterFunc from './BrowserRouter/MainRouter';
 import MainStyledComponent from './StyledComponents/MainStyledComponent';
-import HocBorderExample from './OneRender/HigherOrderComponents HOC/HocBorderExample';
+import HocBorderExample from './HigherOrderComponents HOC/HocBorderExample';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
