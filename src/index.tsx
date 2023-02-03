@@ -9,6 +9,7 @@ import AppTipCalculator from './TipCalculator/AppTipCalculator';
 import { BrowserRouter } from 'react-router-dom';
 import MainRouterFunc from './BrowserRouter/MainRouter';
 import MainStyledComponent from './StyledComponents/MainStyledComponent';
+import HocBorderExample from './OneRender/HigherOrderComponents HOC/HocBorderExample';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -16,6 +17,7 @@ const root = ReactDOM.createRoot(
 root.render(
   //<React.StrictMode> თუ StrictMode იქნება ჩართული useEffect გაეშვება ორჯერ
   <div>
+    <HocBorderExample />
     <AppUseContext />
     <UseRefApp />
     <ApiApp />
