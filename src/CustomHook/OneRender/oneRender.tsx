@@ -12,6 +12,7 @@ export default function OneRender() {
   useEffect(() => {
     if (conosleRef.current) {
       console.log('გაეშვა რექვესთი API ზე ერთხელ');
+      alert('გაეშვა რექვესთი API ზე ერთხელ');
       conosleRef.current = false;
     }
   }, []);
