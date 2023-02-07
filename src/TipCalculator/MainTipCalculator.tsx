@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import styled from 'styled-components';
 
 export default function MainTipCalculator() {
   const [bill, setBill] = useState<number>();
@@ -19,7 +20,7 @@ export default function MainTipCalculator() {
     }
   }, [people]);
   return (
-    <div>
+    <MainWrapper>
       <div>bill : {bill}</div>
       <div>peope : {people}</div>
       <div>tip : {tip}</div>
@@ -94,6 +95,10 @@ export default function MainTipCalculator() {
           ? '$0.00'
           : totalPerPerson}
       </div>
-    </div>
+    </MainWrapper>
   );
 }
+
+const MainWrapper = styled.div`
+  background-color: yellowgreen;
+`;
