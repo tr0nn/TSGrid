@@ -41,4 +41,3 @@ export default function ScreenWidthApp() {
     </div>
   );
 }
-// git commit -m"Custom Hook : screen width & counter"

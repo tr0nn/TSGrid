@@ -11,6 +11,7 @@ import MainRouterFunc from './BrowserRouter/MainRouter';
 import MainStyledComponent from './StyledComponents/MainStyledComponent';
 import HocBorderExample from './HigherOrderComponents HOC/HocBorderExample';
 import ScreenWidthApp from './CustomHook/ScreenWidth/ScreenWidthApp';
+import UseFormApp from './HookForms/UseFormApp';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -29,6 +30,7 @@ root.render(
       <MainRouterFunc />
     </BrowserRouter>
     <MainStyledComponent />
+    <UseFormApp />
   </div>
 
   //</React.StrictMode>
