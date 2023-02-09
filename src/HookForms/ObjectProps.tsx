@@ -4,8 +4,8 @@ let fakeData = {
   email: 'bakar@gmail.com'
 };
 
-function Component(props: any) {
-  console.log(props);
+function Component(props) {
+  //console.log(props);
   return <div>{props.surname}</div>;
 }
 
