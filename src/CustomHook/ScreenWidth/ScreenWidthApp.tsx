@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import './styles.css';
-
 import Count from './Count';
 import Width from './Width';
 
@@ -25,7 +24,7 @@ function useWindowWidth() {
   return width;
 }
 
-export default function ScreenWidthApp() {
+function ScreenWidth() {
   const counter = useCounter();
   const width = useWindowWidth();
 
@@ -38,6 +37,24 @@ export default function ScreenWidthApp() {
       />
       <div id="divider" />
       <Width width={width} />
+    </div>
+  );
+}
+
+export default function ScreenWidthApp() {
+  const [width, setWidth] = useState(false);
+
+  return (
+    <div className="widthDiv">
+      <button
+        className="widthBtn"
+        onClick={() => {
+          setWidth(!width);
+        }}
+      >
+        screen width
+      </button>
+      {width ? <ScreenWidth /> : null}
     </div>
   );
 }

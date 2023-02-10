@@ -58,3 +58,14 @@ p {
   text-align: center;
   color: #e64693;
 }
+
+.widthBtn {
+  background-color: #e64693;
+  width: 150px;
+}
+.widthDiv {
+  margin-top: 20px;
+  border: 2px solid #e64693;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}

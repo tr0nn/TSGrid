@@ -9,7 +9,7 @@ import AppTipCalculator from './TipCalculator/AppTipCalculator';
 import { BrowserRouter } from 'react-router-dom';
 import MainRouterFunc from './BrowserRouter/MainRouter';
 import MainStyledComponent from './StyledComponents/MainStyledComponent';
-import HocBorderExample from './HigherOrderComponents HOC/HocBorderExample';
+import HocApp from './HOCHigherOrderComponents/HocBorderExample';
 import ScreenWidthApp from './CustomHook/ScreenWidth/ScreenWidthApp';
 import UseFormApp from './HookForms/UseFormApp';
 
@@ -19,7 +19,8 @@ const root = ReactDOM.createRoot(
 root.render(
   //<React.StrictMode> თუ StrictMode იქნება ჩართული useEffect გაეშვება ორჯერ
   <div>
-    <HocBorderExample />
+    <h1 className="TSGrid">TSGrid</h1>
+    <HocApp />
     <ScreenWidthApp />
     <AppUseContext />
     <UseRefApp />

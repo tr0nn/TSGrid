@@ -11,6 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.TSGrid {
+  text-align: center;
+}
 .useRefAppDiv {
   border: 2px solid rgb(234, 105, 31);
   margin-bottom: 20px;
@@ -64,4 +67,13 @@ code {
   margin-top: 20px;
   border: 2px solid rgb(38, 195, 187);
   padding-left: 20px;
+}
+
+.hocDiv {
+  border: 2px solid rgb(38, 195, 130);
+  padding-left: 20px;
+}
+.hocBtn {
+  width: 150px;
+  background-color: rgb(38, 195, 130);
 }

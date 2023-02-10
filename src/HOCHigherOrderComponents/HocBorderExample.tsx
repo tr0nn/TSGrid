@@ -1,4 +1,5 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, useState } from 'react';
+import '../index.css';
 
 const HocFirst = (props: {}) => {
   return <div>Higher Order Component (HOC) Border</div>;
@@ -8,7 +9,7 @@ const HocFirst = (props: {}) => {
 // რომელსაც პარამეტრად გადაეცემა კომპონენტი.
 const HocFirstWidthFrame = conditionalContainer(HocFirst);
 
-export default function HocBorderExample() {
+function HocBorderExample() {
   return (
     <div className="Hoc">
       <HocFirstWidthFrame />
@@ -21,8 +22,26 @@ interface Props {}
 // ჩაჯდება გასტილულ div ელემენტში. რომელსაც ექნება border
 function conditionalContainer(Component: (props: any) => JSX.Element) {
   return (props: Props) => (
-    <div style={{ borderWidth: 1, borderColor: 'red', borderStyle: 'solid' }}>
+    <div style={{ borderWidth: 5, borderColor: 'red', borderStyle: 'solid' }}>
       <Component />
+    </div>
+  );
+}
+
+export default function HocApp() {
+  const [hocState, setHocState] = useState(false);
+
+  return (
+    <div className="hocDiv">
+      <button
+        className="hocBtn"
+        onClick={() => {
+          setHocState(!hocState);
+        }}
+      >
+        HOC
+      </button>
+      {hocState ? <HocBorderExample /> : null}
     </div>
   );
 }

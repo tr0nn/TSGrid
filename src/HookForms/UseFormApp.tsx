@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { keyboardImplementationWrapper } from '@testing-library/user-event/dist/keyboard';
 import { useForm } from 'react-hook-form';
 import ObjectProps from './ObjectProps';
 
@@ -20,6 +20,7 @@ export default function UseFormApp() {
   const submit = data => {
     console.log('onSubmit მაშინ გაეშვება როცა ყველფერი კარგადაა - ' + data);
   };
+
   console.log(watch('name'));
   console.log('Errors :', errors.email);
 
