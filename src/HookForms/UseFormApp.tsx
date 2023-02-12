@@ -1,7 +1,8 @@
 import { keyboardImplementationWrapper } from '@testing-library/user-event/dist/keyboard';
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import ObjectProps from './ObjectProps';
-
+import '../index.css';
 /* register არის ფუნქცია რომელიც აბრუნებს ობიექტს */
 /* პარამეტრად გადაეცემა input name რითიც ხდება input value დაჭერა */
 // { required: true } დროს როდესავ ველი ცარიელია არ გაეშვება
@@ -9,7 +10,7 @@ import ObjectProps from './ObjectProps';
 /* handleSubmit(submit) არის ფია რომელიც აბრუნებს input მნიშვნელობების ობიექტს */
 
 // watch() უყურებს name value და აბრუნებს რაც name ში წერია იმ წამს
-export default function UseFormApp() {
+function UseForm() {
   const {
     register,
     handleSubmit,
@@ -50,6 +51,24 @@ export default function UseFormApp() {
         <button type="submit">register</button>
       </form>
       <ObjectProps />
+    </div>
+  );
+}
+
+export default function UseFormApp() {
+  const [useForm, setUseForm] = useState(false);
+
+  return (
+    <div className="useFormDiv">
+      <button
+        className="useFormBtn"
+        onClick={() => {
+          setUseForm(!useForm);
+        }}
+      >
+        useForm
+      </button>
+      {useForm ? <UseForm /> : null}
     </div>
   );
 }
