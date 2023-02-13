@@ -28,7 +28,9 @@ export default function MainStyledComponent() {
 function StyledComponent() {
   return (
     <div>
-      <Title primary>hello world from styled components</Title>
+      <Title primary>
+        hello world from <Strong>styled components</Strong>
+      </Title>
       <CssStyles />
     </div>
   );
@@ -37,4 +39,8 @@ function StyledComponent() {
 const Title = Styled.h2<{ primary: boolean }>`
 font-size: 1.5em;
 color: ${props => (props.primary ? 'green' : 'red')};
+`;
+
+const Strong = styled.strong`
+  color: red;
 `;
