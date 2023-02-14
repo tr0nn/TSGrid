@@ -30,6 +30,7 @@ function StyledComponent() {
     <div>
       <Title primary>
         hello world from <Strong>styled components</Strong>
+        <SCinput placeholder="enter the void"></SCinput>
       </Title>
       <CssStyles />
     </div>
@@ -43,4 +44,8 @@ color: ${props => (props.primary ? 'green' : 'red')};
 
 const Strong = styled.strong`
   color: red;
+`;
+
+const SCinput = styled.input`
+  width: 10%;
 `;
